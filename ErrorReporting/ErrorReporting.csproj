@@ -62,10 +62,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="logdb.designer.cs">
+    <Compile Include="LogDB.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>logdb.dbml</DependentUpon>
+      <DependentUpon>LogDB.dbml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -89,9 +89,9 @@
     <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="logdb.dbml">
+    <None Include="LogDB.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>logdb.designer.cs</LastGenOutput>
+      <LastGenOutput>LogDB.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -99,8 +99,8 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="logdb.dbml.layout">
-      <DependentUpon>logdb.dbml</DependentUpon>
+    <None Include="LogDB.dbml.layout">
+      <DependentUpon>LogDB.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

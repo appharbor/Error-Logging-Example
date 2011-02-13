@@ -23,7 +23,7 @@ namespace ErrorReporting
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="db887")]
-	public partial class logdbDataContext : System.Data.Linq.DataContext
+	public partial class LogDBDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -35,31 +35,31 @@ namespace ErrorReporting
     partial void DeleteLogEntry(LogEntry instance);
     #endregion
 		
-		public logdbDataContext() : 
+		public LogDBDataContext() : 
 				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["database"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public logdbDataContext(string connection) : 
+		public LogDBDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public logdbDataContext(System.Data.IDbConnection connection) : 
+		public LogDBDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public logdbDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public LogDBDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public logdbDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public LogDBDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();

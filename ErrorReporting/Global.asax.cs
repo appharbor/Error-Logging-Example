@@ -38,7 +38,7 @@ namespace ErrorReporting
 			logEntry.Message = exception.Message;
 			logEntry.StackTrace = exception.StackTrace;
 
-			var datacontext = new logdbDataContext();
+			var datacontext = new LogDBDataContext();
 			datacontext.LogEntries.InsertOnSubmit(logEntry);
 			datacontext.SubmitChanges();
 		}
