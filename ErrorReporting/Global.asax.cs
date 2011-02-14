@@ -31,17 +31,24 @@ namespace ErrorReporting
 
 		protected void Application_Error(object sender, EventArgs e)
 		{
-			var exception = Server.GetLastError();
-			var logEntry = new LogEntry
+			try
 			{
-				Date = DateTime.Now,
-				Message = exception.Message,
-				StackTrace = exception.StackTrace,
-			};
+				var exception = Server.GetLastError();
+				var logEntry = new LogEntry
+				{
+					Date = DateTime.Now,
+					Message = exception.Message,
+					StackTrace = exception.StackTrace,
+				};
 
-			var datacontext = new LogDBDataContext();
-			datacontext.LogEntries.InsertOnSubmit(logEntry);
-			datacontext.SubmitChanges();
+				var datacontext = new LogDBDataContext();
+				datacontext.LogEntries.InsertOnSubmit(logEntry);
+				datacontext.SubmitChanges();
+			}
+			catch (Exception)
+			{
+				// failed to record exception
+			}
 		}
 	}
 }
